@@ -1,6 +1,7 @@
 import numpy as np
 from numpy.typing import ArrayLike
 from scipy import linalg
+from typing import Optional
 
 
 def qzdiv(
@@ -304,8 +305,8 @@ def gensys(
     c: ArrayLike,
     psi: ArrayLike,
     pi: ArrayLike,
-    div: float | None = None,
-    tol: float | None = 1e-8,
+    div: Optional[float] = None,
+    tol: Optional[float] = 1e-8,
 ) -> tuple:
     """
     Christopher Sim's gensys
