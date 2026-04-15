@@ -1,0 +1,21 @@
+[package]
+name = "rust_numeric"
+version = "0.1.0"
+edition = "2021"          
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[lib]
+name = "rust_numeric"
+path = "src/lib.rs"
+crate-type = ["rlib", "cdylib"]
+
+[profile.release]
+opt-level     = 3
+lto           = true
+codegen-units = 1
+
+[dependencies]
+pyo3 = { version = "0.22.6", features = ["extension-module"] }

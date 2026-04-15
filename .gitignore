@@ -16,3 +16,12 @@ __pycache__/
 .DS_Store
 .idea/
 .vscode/
+
+target/
+*.so
+*.dylib
+dist/
+*.egg-info/
+
+benchmarks/.mplconfig/
+.mplconfig/
